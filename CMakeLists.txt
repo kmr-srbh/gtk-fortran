@@ -149,6 +149,15 @@ pkg_check_modules(GTK REQUIRED ${GTKname})
 # and to the linker where to look for libraries:
 include_directories(${GTK_INCLUDE_DIRS})
 link_directories(${GTK_LIBRARY_DIRS})
+
+if(CMAKE_Fortran_COMPILER_ID STREQUAL "LFortran")
+    # Remove unsupported flags for lfortran   
+    string(REPLACE "-pthread" "" GTK_CFLAGS_OTHER "${GTK_CFLAGS_OTHER}")
+    string(REPLACE "-msse2" "" GTK_CFLAGS_OTHER "${GTK_CFLAGS_OTHER}")
+    string(REPLACE "-msse" "" GTK_CFLAGS_OTHER "${GTK_CFLAGS_OTHER}")
+    string(REPLACE "-mfpmath=sse" "" GTK_CFLAGS_OTHER "${GTK_CFLAGS_OTHER}")
+endif()
+
 # Add other flags to the compiler:
 add_definitions(${GTK_CFLAGS_OTHER})
 
