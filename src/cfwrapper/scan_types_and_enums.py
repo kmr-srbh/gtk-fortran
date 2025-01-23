@@ -145,7 +145,7 @@ class types_enums():
 
     # Two words types:
     TYPES2_DICT = {
-        "long double": ("real(c_long_double)", "c_long_double"),
+        "long double": ("real(c_double)", "c_double"),
         "unsigned long":("integer(c_long)", "c_long"),
         "unsigned short":("integer(c_short)", "c_short"),
         "unsigned int":("integer(c_int)", "c_int")

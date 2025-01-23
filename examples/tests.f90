@@ -138,8 +138,8 @@ contains
       print *, "C_DOUBLE", C_DOUBLE
       errors = errors + 1
     end if
-    if (C_LONG_DOUBLE < 0) then
-      print *, "C_LONG_DOUBLE", C_LONG_DOUBLE
+    if (C_DOUBLE < 0) then
+      print *, "C_DOUBLE", C_DOUBLE
       errors = errors + 1
     end if
     if (C_FLOAT_COMPLEX < 0) then
@@ -150,8 +150,8 @@ contains
       print *, "C_DOUBLE_COMPLEX", C_DOUBLE_COMPLEX
       errors = errors + 1
     end if
-    if (C_LONG_DOUBLE_COMPLEX < 0) then
-      print *, "C_LONG_DOUBLE_COMPLEX", C_LONG_DOUBLE_COMPLEX
+    if (C_DOUBLE_COMPLEX < 0) then
+      print *, "C_DOUBLE_COMPLEX", C_DOUBLE_COMPLEX
       errors = errors + 1
     end if
     if (C_BOOL < 0) then

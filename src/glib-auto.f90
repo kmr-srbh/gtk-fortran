@@ -5786,16 +5786,16 @@ end subroutine
 !void g_assertion_message_cmpnum (const char *domain, const char *file, int line, const char *func, const char *expr, long double arg1, const char *cmp, long double arg2, char numtype) ;
 subroutine g_assertion_message_cmpnum(domain, file, line, func, expr, arg1,&
 & cmp, arg2, numtype) bind(c)
-  import :: c_char, c_int, c_long_double
+  import :: c_char, c_int, c_double
   implicit none
   character(kind=c_char), dimension(*) :: domain
   character(kind=c_char), dimension(*) :: file
   integer(c_int), value :: line
   character(kind=c_char), dimension(*) :: func
   character(kind=c_char), dimension(*) :: expr
-  real(c_long_double), value :: arg1
+  real(c_double), value :: arg1
   character(kind=c_char), dimension(*) :: cmp
-  real(c_long_double), value :: arg2
+  real(c_double), value :: arg2
   character(kind=c_char), value :: numtype
 end subroutine
 
